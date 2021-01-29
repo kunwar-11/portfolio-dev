@@ -1,9 +1,9 @@
 import React from 'react'
-
+import AboutPage from './pages/Aboutus'
 function App() {
   return (
     <div className="App">
-      <h1>hello react</h1>
+      <AboutPage />
     </div>
   );
 }
