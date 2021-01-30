@@ -25,7 +25,7 @@ const Navigation = styled.nav`
     justify-content : space-between;
     align-items : center;
     padding : 1rem 8rem;
-    background-color : #282828
+    background : #282828;
     a {
         color : white;
         text-decoration : none;
