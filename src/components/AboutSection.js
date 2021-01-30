@@ -1,6 +1,7 @@
 import React from 'react'
 import home1 from '../img/home1.png'
-import styled from 'styled-components'
+// import styled from 'styled-components'
+import {Aboutus , AboutusTitle , AboutusTitlePart , AboutusImage} from '../styles'
 function AboutSection() {
     return (
         <Aboutus>
@@ -25,34 +26,5 @@ function AboutSection() {
         </Aboutus>
     )
 }
-const Aboutus = styled.div`
-    min-height : 90vh;
-    display: flex;
-    align-items : center;
-    justify-content : space-between;
-    padding : 5rem 10rem;
-    color : white;
-`
 
-const AboutusTitle = styled.div`
-    flex : 1;
-    padding-right : 5rem;
-    h2 {
-        font-weight : lighter;
-    }
-`
-
-const AboutusImage = styled.div`
-    flex : 1;
-    overflow : hidden;
-    img {
-        width : 100%;
-        height : 80vh;
-        object-fit : cover;
-    }
-`
-
-const AboutusTitlePart = styled.div`
-    overflow : hidden;
-`
 export default AboutSection
