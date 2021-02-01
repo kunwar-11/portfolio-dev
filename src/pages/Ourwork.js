@@ -7,6 +7,7 @@ import goodtimes from '../img/goodtimes-small.png'
 
 import {motion} from 'framer-motion'
 import {pageAnimation , fade ,imageAnimation , lineAnimation , slider , sliderContainer} from '../animation'
+
 function Ourwork() {
     return (
         <Work style = {{backgroundColor : '#fff'}} exit='exit' variants = {pageAnimation} initial = 'hidden' animate = 'show'>

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-
-export const Aboutus = styled.div`
+import {motion} from 'framer-motion'
+export const Aboutus = styled(motion.div)`
     min-height : 90vh;
     display: flex;
     align-items : center;

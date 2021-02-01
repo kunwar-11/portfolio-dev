@@ -6,9 +6,12 @@ import Teamwork from '../img/teamwork.svg'
 import Home2 from '../img/home2.png'
 import {Aboutus , AboutusTitle , AboutusImage} from '../styles'
 import styled from 'styled-components'
+import {scrollAnimation} from '../animation'
+import {useScroll} from './useScroll'
 function ServicesSection() {
+    const [elements,controls] = useScroll()
     return (
-        <Services>
+        <Services variants = {scrollAnimation} ref = {elements} animate = {controls} initial = 'hidden'>
             <AboutusTitle>
                 <h2>High <span>quality</span> services</h2>
                 <Cards>

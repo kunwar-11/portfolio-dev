@@ -1,39 +1,38 @@
 import React from 'react'
 import {Aboutus} from '../styles'
 import styled from 'styled-components'
+import Toggle from './Toggle'
+import {AnimateSharedLayout} from 'framer-motion'
+import {scrollAnimation} from '../animation'
+import {useScroll} from './useScroll'
 function FaqSection() {
+    const [elements , controls] = useScroll()
     return (
-        <Faq>
+        <Faq variants = {scrollAnimation} ref = {elements} animate = {controls} initial = 'hidden' >
             <div className="faqSection__header">
                 <h2>Any Question ? <span>FAQ </span></h2>
-                <div className="faqSection__question">
-                    <h4>How Do I start ?</h4>
+                <AnimateSharedLayout>
+                <Toggle title = 'How Do I start ?'>     
+                        <div className="faqSection__question__answer">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis reprehenderit praesentium laboriosam iusto minima, consequuntur</p>
+                        </div>
+                </Toggle>
+                <Toggle title = 'What Products do you offer ?'>
                     <div className="faqSection__question__answer">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis reprehenderit praesentium laboriosam iusto minima, consequuntur</p>
                     </div>
-                    <div className="faq__line"></div>
-                </div>
-                <div className="faqSection__question">
-                    <h4>What Products do you offer ?</h4>
+                </Toggle>
+                <Toggle title = 'Different payement methods'>
                     <div className="faqSection__question__answer">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis reprehenderit praesentium laboriosam iusto minima, consequuntur</p>
                     </div>
-                    <div className="faq__line"></div>
-                </div>
-                <div className="faqSection__question">
-                    <h4>Different payement methods</h4>
-                    <div className="faqSection__question__answer">
+                </Toggle>
+                <Toggle title = 'Daily Schedule'>
+                     <div className="faqSection__question__answer">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis reprehenderit praesentium laboriosam iusto minima, consequuntur</p>
                     </div>
-                    <div className="faq__line"></div>
-                </div>
-                <div className="faqSection__question">
-                    <h4>Daily Schedule</h4>
-                    <div className="faqSection__question__answer">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis reprehenderit praesentium laboriosam iusto minima, consequuntur</p>
-                    </div>
-                    <div className="faq__line"></div>
-                </div>
+                </Toggle>
+                </AnimateSharedLayout>
             </div>
         </Faq>
     )
