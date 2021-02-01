@@ -2,6 +2,8 @@ import React , {useState , useEffect} from 'react'
 import styled from 'styled-components'
 import {useHistory} from 'react-router-dom'
 import {MovieState} from '../movieState'
+import {motion} from 'framer-motion'
+import {pageAnimation} from '../animation'
 function Moviedetail() {
     const history = useHistory();
     const url = history.location.pathname;
@@ -15,7 +17,7 @@ function Moviedetail() {
     return (
         <>
         {movie && (
-            <Details>
+            <Details exit='exit' variants = {pageAnimation} initial = 'hidden' animate = 'show'>
                 <Heading>
                     <h2>{movie.title}</h2>
                     <img src={movie.mainImg} alt="mainImg"/>
@@ -34,7 +36,7 @@ function Moviedetail() {
     )
 }
 
-const Details = styled.div`
+const Details = styled(motion.div)`
     color : white;
 `
 
